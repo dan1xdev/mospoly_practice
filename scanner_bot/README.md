@@ -112,15 +112,22 @@ async def handle_photo(message: types.Message):
 
 ## 🖼️ Иллюстрации и схемы <a name="иллюстрации"></a>
 
-### Архитектура бота
+### Пример входного изображения
 
-![Архитектура бота](https://i.imgur.com/YgO8Z7B.png)
+![input-example](https://github.com/user-attachments/assets/e07e7f3b-49be-4340-88b4-7f99e6f25623)
+
 
 ---
 
-### Пример OCR
+### Пример выхода
 
-![Пример OCR](https://i.imgur.com/x6xROhb.png)
+![output-example](https://github.com/user-attachments/assets/4c34103f-6987-4ab1-80fa-6423a049133a)
+
+
+---
+
+### Схема взаимодействия
+![architecture](https://github.com/user-attachments/assets/f7bb2313-99a2-4f5e-b29a-d6605acd26be)
 
 ---
 

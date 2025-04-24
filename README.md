@@ -14,7 +14,9 @@
 ## Вариативная часть задания
 
 Вариативная часть задания расположена в папке src/scanner_bot
+
 Python: How To Create a Telegram Bot Using Python, модификация - OCR функциональность
+
 https://www.freecodecamp.org/news/how-to-create-a-telegram-bot-using-python/ 
 
 ## Ответственный по проектной (учебной) практике

@@ -42,4 +42,10 @@
 ```bash
 git clone https://github.com/your-username/telegram-ocr-bot.git
 cd telegram-ocr-bot
+```
+
+![Архитектура](images/architecture.png)
+![Пример входного изображения](images/input-example.jpg)
+![Результат OCR](images/output-example.jpg)
+
 

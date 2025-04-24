@@ -13,11 +13,9 @@
 
 ## Вариативная часть задания
 
-Python: How To Create a Telegram Bot Using Python, модификация - OCR функциональность
-
-https://www.freecodecamp.org/news/how-to-create-a-telegram-bot-using-python/ (взято с репозитория https://github.com/codecrafters-io/build-your-own-x?tab=readme-ov-file#build-your-own-bot)
-
 Вариативная часть задания расположена в папке src/scanner_bot
+Python: How To Create a Telegram Bot Using Python, модификация - OCR функциональность
+https://www.freecodecamp.org/news/how-to-create-a-telegram-bot-using-python/ 
 
 ## Ответственный по проектной (учебной) практике
 

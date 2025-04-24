@@ -17,7 +17,7 @@ Python: How To Create a Telegram Bot Using Python, модификация - OCR 
 
 https://www.freecodecamp.org/news/how-to-create-a-telegram-bot-using-python/ (взято с репозитория https://github.com/codecrafters-io/build-your-own-x?tab=readme-ov-file#build-your-own-bot)
 
-Вариативная часть задания расположена в папке scanner_bot
+Вариативная часть задания расположена в папке src/scanner_bot
 
 ## Ответственный по проектной (учебной) практике
 

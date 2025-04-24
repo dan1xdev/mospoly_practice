@@ -13,8 +13,8 @@
 
 ## Вариативная часть задания
 
-Формулировка задания вариативной части и выбранная тематика (если есть). Приведите также дополнительные ссылки на источники задания (если есть).
 Python: How To Create a Telegram Bot Using Python, модификация - OCR функциональность
+
 https://www.freecodecamp.org/news/how-to-create-a-telegram-bot-using-python/ (взято с репозитория https://github.com/codecrafters-io/build-your-own-x?tab=readme-ov-file#build-your-own-bot)
 
 ## Ответственный по проектной (учебной) практике

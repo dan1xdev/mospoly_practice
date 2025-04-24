@@ -1,0 +1,139 @@
+<h1>🧠 Telegram OCR Бот: Руководство по созданию сканера текста с фото</h1>
+
+<h2>📚 Содержание</h2>
+<ol>
+  <li>Обзор и исследование предметной области</li>
+  <li>Требования</li>
+  <li>Установка и настройка окружения</li>
+  <li>Создание Telegram-бота</li>
+  <li>Интеграция Tesseract OCR</li>
+  <li>Разработка функциональности бота</li>
+  <li>Иллюстрации и схемы</li>
+  <li>Размещение в GitHub</li>
+  <li>Заключение</li>
+</ol>
+
+<hr>
+
+<h2>🧪 Обзор и исследование предметной области</h2>
+<p><strong>Цель</strong>: создать Telegram-бота, который принимает изображения и распознает текст, возвращая результат пользователю. Используемая технология — OCR (оптическое распознавание символов).</p>
+<p><strong>Исследуемые компоненты</strong>:</p>
+<ul>
+  <li><strong>Telegram API</strong> — взаимодействие с пользователями.</li>
+  <li><strong>Aiogram</strong> — асинхронный фреймворк для написания Telegram-ботов.</li>
+  <li><strong>Tesseract OCR</strong> — популярный open-source движок для распознавания текста.</li>
+  <li><strong>Pillow (PIL)</strong> — работа с изображениями.</li>
+  <li><strong>Python</strong> — основной язык реализации.</li>
+</ul>
+
+<hr>
+
+<h2>🛠️ Требования</h2>
+<ul>
+  <li>Python 3.9+</li>
+  <li>pip (пакетный менеджер Python)</li>
+  <li><a href="https://github.com/tesseract-ocr/tesseract">Tesseract OCR</a></li>
+  <li>Библиотеки:
+    <pre><code class="language-bash">pip install aiogram pillow pytesseract</code></pre>
+  </li>
+</ul>
+
+<hr>
+
+<h2>⚙️ Установка и настройка окружения</h2>
+<ol>
+  <li>Установите Python и pip.</li>
+  <li>Установите Tesseract:
+    <ul>
+      <li>Windows: загрузите с <a href="https://github.com/tesseract-ocr/tesseract">официального сайта</a>.</li>
+      <li>Укажите путь в коде:
+        <pre><code class="language-python">pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"</code></pre>
+      </li>
+    </ul>
+  </li>
+  <li>Установите Python-зависимости:
+    <pre><code class="language-bash">pip install aiogram pillow pytesseract</code></pre>
+  </li>
+</ol>
+
+<hr>
+
+<h2>🤖 Создание Telegram-бота</h2>
+<ol>
+  <li>Перейдите в <a href="https://t.me/BotFather">BotFather</a> в Telegram.</li>
+  <li>Введите команду <code>/newbot</code>, задайте имя и получите API-токен.</li>
+  <li>Вставьте токен в переменную <code>API_TOKEN</code>.</li>
+</ol>
+
+<hr>
+
+<h2>🧩 Интеграция Tesseract OCR</h2>
+<pre><code class="language-python">from PIL import Image
+import pytesseract
+
+pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+
+text = pytesseract.image_to_string(Image.open("example.jpg"), lang="eng")</code></pre>
+
+<hr>
+
+<h2>👨‍💻 Разработка функциональности бота</h2>
+<h3>1. Инициализация</h3>
+<pre><code class="language-python">from aiogram import Bot, Dispatcher, types
+from aiogram.filters import Command</code></pre>
+
+<h3>2. Команда /start</h3>
+<pre><code class="language-python">@dp.message(Command("start"))
+async def start_cmd(message: types.Message):
+    ...</code></pre>
+
+<h3>3. Изменение языка OCR</h3>
+<pre><code class="language-python">@dp.message(Command("lang"))
+async def change_language(message: types.Message):
+    ...</code></pre>
+
+<h3>4. Обработка изображения и распознавание</h3>
+<pre><code class="language-python">@dp.message(lambda msg: msg.photo)
+async def handle_photo(message: types.Message):
+    ...</code></pre>
+
+<hr>
+
+<h2>🖼️ Иллюстрации и схемы</h2>
+<h3>Пример входного изображения</h3>
+<p><img src="https://github.com/user-attachments/assets/e07e7f3b-49be-4340-88b4-7f99e6f25623" alt="input-example"></p>
+
+<h3>Пример выхода</h3>
+<p><img src="https://github.com/user-attachments/assets/4c34103f-6987-4ab1-80fa-6423a049133a" alt="output-example"></p>
+
+<h3>Схема взаимодействия</h3>
+<p><img src="https://github.com/user-attachments/assets/f7bb2313-99a2-4f5e-b29a-d6605acd26be" alt="architecture"></p>
+
+<h3>Команды пользователя</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Команда</th>
+      <th>Описание</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>/start</td>
+      <td>Приветствие и инструкция</td>
+    </tr>
+    <tr>
+      <td>/lang eng/rus</td>
+      <td>Сменить язык распознавания</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Структура проекта</h3>
+<pre><code>scanner_bot/
+│
+├── main.py
+├── requirements.txt
+└── README.md</code></pre>
+
+<hr>

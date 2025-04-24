@@ -8,7 +8,7 @@ import pytesseract
 
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
-API_TOKEN = ("7590491235:AAHmGbiv1dN2GZ86UR6l-UhjrQ01QJe7pOM")
+API_TOKEN = ("token")
 logging.basicConfig(level=logging.INFO)
 
 bot = Bot(token=API_TOKEN)
